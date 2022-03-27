@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+}
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('../fonts/Roboto-Light.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-size: 16px;
+}
+@font-face {
+    font-family: 'Roboto-medium';
+    src: url('../fonts/Roboto-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('../fonts/Roboto-Regular.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+@font-face {
+    font-family: 'fa-brands-400.woff';
+    src: url('../fonts/fotsawesome/webfonts\/fa-brands-400.woff');
+}
+@font-face {
+    font-family: 'fa-solid-900.woff';
+    src: url('../fonts/fotsawesome/webfonts\/fa-solid-900.woff');
+}
+@font-face {
+    font-family: 'fa-duotone-900.woff';
+    src: url('../fonts/fotsawesome/webfonts\/fa-duotone-900.woff');
+}
+@font-face {
+    font-family: 'fa-light-300.woff';
+    src: url('../fonts/fotsawesome/webfonts\/fa-light-300.woff');
+}
+@font-face {
+    font-family: 'fa-regular-400.woff';
+    src: url('../fonts/fotsawesome/webfonts\/fa-regular-400.woff');
+}

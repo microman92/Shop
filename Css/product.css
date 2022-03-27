@@ -1,0 +1,104 @@
+/* Product */
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.5s;
+}
+
+a.thumbnail.active,
+a.thumbnail:focus,
+a.thumbnail:hover {
+  border-color: #ee6e73;
+}
+
+.thumbnails .thumb-main a {
+  padding: 20px;
+}
+
+.thumbnails .thumb-main img {
+  max-width: 300px;
+}
+
+.thumbnails .image-additional {
+  float: left;
+  margin-right: 20px;
+  max-width: 100px;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #ee6e73;
+  outline: 0;
+  box-shadow: 0 0 0 .1rem rgba(238, 110, 115, .25);
+}
+
+/* Popup */
+
+.mfp-3d-unfold .mfp-content {
+  perspective: 2000px;
+}
+
+.mfp-3d-unfold .mfp-with-anim {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  transform-style: preserve-3d;
+  transform: rotateY(-60deg);
+}
+
+.mfp-3d-unfold.mfp-bg {
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.mfp-3d-unfold.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.mfp-3d-unfold.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+.mfp-3d-unfold.mfp-removing .mfp-with-anim {
+  transform: rotateY(60deg);
+  opacity: 0;
+}
+
+.mfp-3d-unfold.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/* popup */
+
+@media (max-width:992px){
+  .product-card .product-thumb img {
+    height: 150px;
+  }
+}
+
+@media (max-width:420px) {
+  .thumbnails .thumb-main img {
+    max-width: 100%;
+  }
+  .thumbnails .thumb-main img {
+    max-width: 100%;
+  }
+  .product-card .product-thumb{
+    height: 0% !important;
+  }
+}
+@media (max-width:576px) {
+  .product-card .product-thumb img {
+    height: auto;
+  }
+}
+
+
+
+
+/* /Product */

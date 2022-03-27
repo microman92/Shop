@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/bootstrap-5-1.svg">
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <script src="./Js/bootstrap.bundle.min.js" defer></script>
+    <script src="./Js/script.js" defer></script>
+    <link rel="stylesheet" href="./Css/style.css">
+    <title> My boostrap page</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header__top py-3">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col">
+                        <a href="tel:909925638"> <span class="icon-phone">
+                                &#9742;</span>(90)992-56-38</a>
+                    </div>
+                    <div class="col icons text-end">
+                        <form id="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search..." aria-label="Search..."
+                                    name="s">
+                                <button class="btn close__search" type="button"><i
+                                        class="fa-solid fa-xmark"></i></button>
+                                <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
+                        <a href="#" class="open__search"><i class="fa-solid fa-magnifying-glass fa-flip"></i></a>
+                        <a href="#" class="open-cart-modal" data-bs-target="#cart__modal" data-bs-toggle="modal"> <i
+                                class="fa-solid fa-cart-shopping fa-flip"></i>
+                            <span class="badge bg-danger rounded-pill count__items">0</span></a>
+                        <!-- Модальное окно покупки -->
+
+                        <div class="modal fade" id="cart__modal" data-bs-backdrop="static" data-bs-keyboard="false"
+                            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-xl">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="staticBackdropLabel">Корзина</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table class="table text-start">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Фото</th>
+                                                    <th scope="col">Наименование</th>
+                                                    <th scope="col">Кол-во</th>
+                                                    <th scope="col">Цена</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th><a href="#"><img src="./img/apple_cinema.jpg" alt=""></a></th>
+                                                    <td> <a href="#">Apple Cinema 30"</a></td>
+                                                    <td> <a href="#">1</a></td>
+                                                    <td> <a href="#">1000$</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#"><img src="./img/canon.jpg" alt=""></a></th>
+                                                    <td> <a href="">Canon Eos 5D</a></td>
+                                                    <td> <a href="">1</a></td>
+                                                    <td> <a href="">750$</a></td>
+                                                </tr>
+                                                <tr>
+                                                    <th><a href="#"><img src="./img/iphone.jpg" alt=""></a></th>
+                                                    <td> <a href="">Iphone</a></td>
+                                                    <td> <a href="">1</a></td>
+                                                    <td> <a href="">1000$</a></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Продолжить
+                                            покупки</button>
+                                        <button type="button" class="btn btn-primary">Оформить заказ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        <!-- /Модальное окно авторизация -->
+                        <div class="dropdown d-inline-block">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown"><i
+                                    class="fa-solid fa-user fa-flip"></i></a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="#" data-bs-target="#login_modal"
+                                        data-bs-toggle="modal">Авторизация</a></li>
+                                <li><a class="dropdown-item" href="#" data-bs-target="#reg_modal"
+                                        data-bs-toggle="modal">Регистрация</a></li>
+
+                            </ul>
+                            <!-- Модальное окно авторизации -->
+                            <div class="modal fade" id="login_modal" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Авторизация</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputEmail1" class="form-label">Введите ваш
+                                                        e-mail или Логин</label>
+                                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                                        aria-describedby="emailHelp">
+                                                    <div id="emailHelp" class="form-text">Мы никогда не будем делиться
+                                                        вашей электронной почтой с кем-либо
+                                                        еще. </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+                                                    <input type="password" class="form-control"
+                                                        id="exampleInputPassword1">
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                                    <label class="form-check-label" for="exampleCheck1">Запомнить
+                                                        пароль</label>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-danger"
+                                                data-bs-dismiss="modal">Войти</button>
+                                            <button type="button" class="btn btn-primary"
+                                                data-bs-dismiss="modal">Отмена</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Модальное окно Регистрации -->
+                            <div class="modal fade" id="reg_modal" data-bs-backdrop="static" data-bs-keyboard="false"
+                                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">Регистрация</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <form class="row g-3">
+                                                <div class="col-md-12">
+                                                    <label for="validationServer01" class="form-label">Имя</label>
+                                                    <input type="text" class="form-control" id="validationServer01"
+                                                        placeholder="Дмитрий" required>
+
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label for="validationServer02" class="form-label">Фамилия</label>
+                                                    <input type="text" class="form-control " id="validationServer02"
+                                                        placeholder="Васильевич" required>
+
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label for="validationServerUsername"
+                                                        class="form-label">Логин</label>
+                                                    <div class="input-group d-flex">
+                                                        <span class="input-group-text order-1"
+                                                            id="inputGroupPrepend3">@</span>
+                                                        <input type="text" class="form-control"
+                                                            id="validationServerUsername"
+                                                            aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+                                                            placeholder="Dima@gmail.com" required>
+
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="RegPassword" class="form-label">Пароль</label>
+                                                    <input type="password" class="form-control" id="RegPassword">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="RegReplyPassword" class="form-label">Повторите
+                                                        пароль</label>
+                                                    <input type="password" class="form-control" id="RegReplyPassword">
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <label for="validationServer03" class="form-label">Страна</label>
+                                                    <input type="text" class="form-control" id="validationServer03"
+                                                        aria-describedby="validationServer03Feedback" required
+                                                        placeholder="Узбекистан">
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label for="validationServer04" class="form-label">Город</label>
+                                                    <select class="form-select" id="validationServer04"
+                                                        aria-describedby="validationServer04Feedback" required>
+                                                        <option selected disabled value="">Выберите</option>
+                                                        <option>ТАШКЕНТ</option>
+                                                        <option>ТАШКЕНТСКАЯ ОБЛАСТЬ</option>
+                                                        <option>САМАРКАНД</option>
+                                                        <option>АНДИЖАН</option>
+                                                        <option>БУХАРА</option>
+                                                        <option>ДЖИЗАК</option>
+                                                        <option>Термез</option>
+                                                        <option>Наманган</option>
+                                                        <option>Навой</option>
+                                                        <option>Сухрандарья</option>
+                                                        <option>ХИВА</option>
+                                                        <option>КАРАКАЛПАКСТАН</option>
+                                                        <option>НУКУС</option>
+                                                        <option>НАВОИ</option>
+                                                        <option>КОКАНД</option>
+                                                        <option>КАРШИ</option>
+                                                        <option>ФЕРГАНА</option>
+                                                        <option>ШАХРИСАБЗ</option>
+                                                        <option>ГУЛИСТАН</option>
+                                                        <option>Ургенч</option>
+
+                                                    </select>
+                                                    <div id="validationServer04Feedback" class="invalid-feedback">
+                                                        Please select a valid state.
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                </div>
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="invalidCheck3" aria-describedby="invalidCheck3Feedback"
+                                                            required>
+                                                        <label class="form-check-label" for="invalidCheck3">
+                                                            Я соглашаюсь с правилами и политикой конфидициальности
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary" type="submit">Submit form</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Header__top -->
+
+        <!-- Header__bottom -->
+        <div class="header__bottom py-2">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <div class="container-fluid p-0">
+                        <a class="navbar-brand" href="index.html">Shop Brand</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="category.html">Компьютеры</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="category.html">Планшеты</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="category.html" id="navbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Ноутбуки
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="category.html">Mac</a></li>
+                                        <li><a class="dropdown-item" href="category.html">Windows</a></li>
+                                    </ul>
+
+                                <li class="nav-item">
+                                    <a href="category.html" class="nav-link">Телефоны</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="category.html" class="nav-link">Камеры</a>
+                                </li>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div> <!-- /Header__bottom -->
+    </header>
+    <!-- Carousel -->
+    <div class="container-fluid my-carousel align-items-start">
+        <div id="carouselExampleIndicators" class="carousel carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./img/macbookSL.jpg" class="d-block w-100 carousel__cards" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/iphone.jpg" class="d-block w-100 carousel__cards" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/canon1.jpg" class="d-block w-100 carousel__cards" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div> <!-- /Carousel -->
+
+    <!-- Product cards -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="row col-sm-12">
+                <h3 class="section-title">Рекомендуемые товары</h3>
+                <div class="col-lg-4 col-sm-6 mb3">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <a href="product.html"> <img src="./img/macbook-cards.jpg" alt=""></a>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="product.html">Macbook air</a></h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi impedit vero iure
+                                veritatis aliquid nihil?</p>
+                            <div class="product-bottom-deatails d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>3500$</small>
+                                    3000$
+                                </div>
+                                <div class="product-links">
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 mb3">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <a href="product.html"> <img src="./img/hp-spectre.jpg" alt=""> </a>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="product.html">Hp spectre</a></h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat accusamus officiis
+                                nesciunt debitis, ipsum optio</p>
+                            <div class="product-bottom-deatails d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>2000$</small>
+                                    1800$
+                                </div>
+                                <div class="product-links">
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 mb3">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <a href="product.html"> <img src="./img/Imac-cards.jpg" alt=""> </a>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="product.html">Imac</a></h4>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias dolor placeat
+                                reprehenderit dolorum ex soluta impedit eos explicabo ut deserunt.</p>
+                            <div class="product-bottom-deatails d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>3000$</small>
+                                    2600$
+                                </div>
+                                <div class="product-links">
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 mb3">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <a href="product.html"> <img src="./img/watch-cards.jpg" alt=""> </a>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="product.html">Apple watch</a></h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum error veniam maxime.</p>
+                            <div class="product-bottom-deatails d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>340$</small>
+                                    300$
+                                </div>
+                                <div class="product-links">
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 mb3">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <a href="product.html"> <img src="./img/canon-cards.png" alt=""> </a>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="product.html">Canon 5D</a></h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt excepturi totam ut
+                                alias molestiae id in illum quia possimus! Quae, accusamus iusto.</p>
+                            <div class="product-bottom-deatails d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>1800$</small>
+                                    1500$
+                                </div>
+                                <div class="product-links">
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-sm-6 mb3">
+                    <div class="product-card">
+                        <div class="product-thumb">
+                            <a href="product.html"> <img src="./img/iphone13.jpg" alt=""> </a>
+                        </div>
+                        <div class="product-details">
+                            <h4><a href="product.html">Iphone-13 Pro Max</a></h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus, quisquam.</p>
+                            <div class="product-bottom-deatails d-flex justify-content-between">
+                                <div class="product-price">
+                                    <small>1300$</small>
+                                    1100$
+                                </div>
+                                <div class="product-links">
+                                    <a href="#"><i class="fa-regular fa-heart"></i></a>
+                                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section> <!-- /Product cards -->
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="section-title text-center">Наши преимущества</h3>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="services-item">
+                        <p class="text-center"><i class="fa-solid fa-truck-fast"></i></p>
+                        <p>Прямые поставки</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="services-item">
+                        <p class="text-center"><i class="fa-solid fa-cubes"></i></p>
+                        <p>Широкий ассортимент товаров</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="services-item">
+                        <p class="text-center"><i class="fa-solid fa-hand-holding"></i></p>
+                        <p>Приятные и конкурентные цены</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="services-item">
+                        <p class="text-center"><i class="fa-solid fa-user-gear"></i></p>
+                        <p>Профессиональная консультация и сервис</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Services -->
+
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-12  text-center">
+                        <h4>Мы в сети</h4>
+                        <a class="navbar-brand" href="#">Shop Brand</a>
+                        <div class="footer-icons">
+                            <a href="#"><i class="fa-brands fa-facebook fa-beat footer-icon"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram-square fa-beat"></i></a>
+                            <a href="#"><i class="fa-brands fa-telegram fa-beat"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter fa-beat"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-12  text-center">
+                        <h4>Информация</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="index.html">О магазине</a></li>
+                            <li><a href="index.html">Оплата и доставка</a></li>
+                            <li><a href="index.html">Гарантия</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-12 text-center">
+                        <h4>Время работы</h4>
+                        <ul class="list-unstyled">
+                            <li>г.Ташкент Улица Мукими</li>
+                            <li>Понедельник - Воскресенье 9:00 - 18:00</li>
+                            <li>Без перерыва</li>
+                            <li>Первые руки</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-12 text-center">
+                        <h4>Контакты</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="tel:(90)992-56-38">(90)992-56-38 Владимир</a></li>
+                            <li><a href="tel:(90)992-56-39">(90)992-56-39 Анатолий</a></li>
+                            <li><a href="tel:(90)992-56-40">(90)992-56-40 Вероника</a></li>
+                            <li><a href="tel:(90)992-56-41">(90)992-56-41 Анастасия</a></li>
+
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <button id="top">
+        <i class="fa-solid fa-angles-up"></i>
+    </button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/1c0ecd21b6.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
